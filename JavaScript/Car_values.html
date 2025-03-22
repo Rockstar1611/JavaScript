@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car_values.js</title>
+</head>
+<body>
+    <script>
+        class car
+        {
+            setValues(brand,price,color)
+            {
+                this.brand= brand;
+                this.price= price;
+                this.color= color;
+            }
+            move()
+            {
+                console.log("Car is Moving.!");
+            }
+            getValues()
+            {
+                console.log("Brand: "+this.brand)
+                console.log("Price: "+this.price)
+                console.log("Color: "+this.color)
+            }
+        }
+        let cr=new car();
+        cr.setValues("BMW",1500000,"white");
+        cr.move();
+        cr.getValues();
+    </script>
+</body>
+</html>

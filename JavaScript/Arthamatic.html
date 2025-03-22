@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthametic_Js</title>
+</head>
+<body>
+    <form onsubmit="display(); return false;">
+        <p id="para"></p>
+        <table>
+            <lable>Number 1 : </lable>
+            <input id="num1"type="text">
+            <br>
+            <lable>Number 2 : </lable>
+            <input id="num2"type="text">
+            <br>
+            <input type="submit"value="ADD">
+            <input type="submit"value="SUB">
+            <br>
+            <input type="submit"value="MUL">
+            <input type="submit"value="DIV">
+        </table>
+    </form>
+    <script>
+        function display()
+        {
+            let num1=document.getElementById("num1").value;
+            let num2=document.getElementById("num2").value;
+            if(num1==" "|| num2==" ")
+            {
+                alert("cannot leave number1 or number2 as empty")
+            }
+            else
+            {
+                let choice=event.submitter.value;
+                switch(choice)
+                {
+                    case "ADD":
+                        let addres=Number(num1) + Number(num2);
+                        document.getElementById("para").innerHTML="ADD : "+addres;
+                        break;
+                    case "SUB":
+                        let subres=Number(num1) - Number(num2);
+                        document.getElementById("para").innerHTML="SUB : "+subres;
+                        break;
+                    case "MUL":
+                        let mulres=Number(num1) * Number(num2);
+                        document.getElementById("para").innerHTML="MUL : "+mulres;
+                        break;
+                    case "DIV":
+                        let divres=Number(num1) / Number(num2);
+                        document.getElementById("para").innerHTML="DIV : "+divres;
+                        break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

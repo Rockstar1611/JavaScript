@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_Js</title>
+</head>
+<body>
+    <form onsubmit="display1()">
+        <table>
+            <lable>Enter data: </lable>
+            <input id="data"type="text">
+            <input type="submit"value="click Here">
+        </table>
+    </form>
+    <br>
+    <form onsubmit="display2()">
+        <table>
+            <lable>Enter data: </lable>
+            <input id="data2"type="text">
+            <input type="submit"value="click Here">
+        </table>
+    </form>
+    <form onsubmit="display3(); return false;">
+    <p id="para"></p>
+        <table>
+            <lable>Enter data: </lable>
+            <input id="data3"type="text">
+            <input type="submit"value="click Here">
+        </table>
+    </form>
+    <script>
+        function display1()
+        {
+            alert("Form is submitted.");
+        }
+        function display2()
+        {
+            let data2=document.getElementById("data2").value;
+            alert("Form is submitter.value: "+data2);
+        }
+        function display3()
+        {
+            let data3=document.getElementById("data3").value;
+            document.getElementById("para").innerHTML="Hello "+data3;
+        }
+    </script>
+</body>
+</html>
