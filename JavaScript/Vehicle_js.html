@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle_js</title>
+</head>
+<body>
+    <script>
+        class Vehicle
+        {
+            usage="Transportation"
+            start()
+            {
+                console.log("Vehicle is started")
+            }
+            stop()
+            {
+                console.log("Vehicle is stoped")
+            }
+        }
+        class Car extends Vehicle
+        {
+            noWheels=4
+            drive()
+            {
+                console.log("drive a car")
+            }
+            display()
+            {
+                console.log("Number of wheels in car is: "+this.noWheels)
+                console.log("use of car is : "+this.usage)
+            }
+        }
+        class Bike extends Vehicle
+        {
+            noWheels=2
+            ride()
+            {
+                console.log("Ride a bike")
+            }
+            display()
+            {
+                console.log("Numbner of wheels on bike is: "+this.noWheels)
+                console.log("use of bike is : "+this.usage)
+            }
+        }
+        let cr=new Car()
+        cr.start()
+        cr.drive()
+        cr.stop()
+        cr.display()
+        let bk=new Bike()
+        bk.start()
+        bk.ride()
+        bk.stop()
+        bk.display()
+    </script>
+</body>
+</html>
